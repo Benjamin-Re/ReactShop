@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 20px;
+}
+
+.linkgroup {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.cartgroup {
+    display: flex;
+    justify-content: right;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.link {
+    text-decoration: none;
+}

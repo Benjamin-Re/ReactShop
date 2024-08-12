@@ -1,3 +1,4 @@
+import styles from './Card.module.css'
 
 function Card (props) {
 
@@ -26,12 +27,12 @@ function Card (props) {
     }
 
     return (
-        <>
-            <h2>I'm a card</h2>
+        <div className={styles.card}>
+            <img className={styles.image} src={props.item.image} alt={props.item.title} />
             <h4>Product: {props.item.title}</h4>
             <h4>price: {props.item.price}</h4>
             <button type='button' onClick={()=> { handleClick(props.item) }}>Add to cart</button>
-        </>
+        </div>
     )
 }
 

@@ -1,24 +1,23 @@
 
 import Card from './Card'
 import { useOutletContext } from 'react-router-dom'
+import styles from './Shop.module.css'
 
 function Shop () {
     const { items, error, loading, cartItems, setCartItems } = useOutletContext()
 
 
     return (
-        <>
-            <h2>This is the SHOP</h2>
+        <div>
+            
             {error && <div className="text-red-700">{error}</div>}
             {loading ? (
                <p>Loading...</p>
             ) : (
-                <div>
+                <div className={styles.container}>
                     {items.map(i => {
                         return <Card
                             item={i} 
-                            title={i.title} 
-                            price={i.price} 
                             key={i.id}
                             setCartItems={setCartItems}
                             cartItems={cartItems}
@@ -26,7 +25,7 @@ function Shop () {
                     })}
                 </div>
             )}
-        </>
+        </div>
     )
 }
 

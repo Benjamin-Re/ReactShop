@@ -23,6 +23,7 @@ function Layout () {
         })
         .then(data => {
             setItems(data)
+            console.log(data)
         })
         .catch(error => setError(error))
         .finally(()=> setLoading(false))
